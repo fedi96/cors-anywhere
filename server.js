@@ -21,7 +21,7 @@ var checkRateLimit = require('./lib/rate-limit')(process.env.CORSANYWHERE_RATELI
 var cors_proxy = require('./lib/cors-anywhere');
 cors_proxy.createServer({
   originBlacklist: originBlacklist,
-  originWhitelist: ['' ,'http://www.jokerstream.com' ,'http://rjh217.herokuapp.com' ,'http://www.rjh217.win/'],//originWhitelist,// 
+  originWhitelist: originWhitelist,//['' ,'http://www.jokerstream.com' ,'http://rjh217.herokuapp.com' ,'http://www.rjh217.win/'],// 
   checkRateLimit: checkRateLimit,
   removeHeaders: [
     'cookie',
